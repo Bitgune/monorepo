@@ -1,6 +1,6 @@
 {
 	"name": "@monorepo/ui",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"sideEffects": [
 		"**/*.css"
 	],
@@ -18,7 +18,8 @@
 		"dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
 		"build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix"
+		"lint:fix": "eslint . --fix",
+		"ui:add": "npx shadcn-ui@latest add"
 	},
 	"devDependencies": {
 		"@monorepo/eslint-config": "*",
