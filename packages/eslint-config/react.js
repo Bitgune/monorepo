@@ -40,7 +40,6 @@ module.exports = {
 		'standard',
 		'standard-jsx',
 		'standard-react',
-		'plugin:jsx-a11y/recommended',
 		'plugin:prettier/recommended',
 		'turbo'
 	],

@@ -6,7 +6,10 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "web": "npm run -w apps/web dev",
+    "shop": "npm run -w apps/shop dev",
+		"ui:add": "npm run -w packages/ui ui:add"
   },
   "devDependencies": {
     "prettier": "^3.3.2",
