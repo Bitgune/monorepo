@@ -111,10 +111,6 @@
 		text-rendering: optimizelegibility;
 	}
 
-	::selection {
-		@apply bg-primary-500 text-primary-foreground;
-	}
-
 	input[type='date']::-webkit-calendar-picker-indicator {
 		@apply absolute right-0 top-[50%] h-4 w-4 -translate-y-[50%] cursor-pointer px-3 opacity-60;
 	}

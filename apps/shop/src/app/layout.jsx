@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 
-import './globals.css'
 import '@monorepo/ui/styles.css'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
