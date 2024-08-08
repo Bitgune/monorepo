@@ -1,27 +1,28 @@
 {
-  "name": "monorepo",
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "lint:fix": "turbo lint:fix",
-    "format": "prettier . --write",
-    "web": "npm run -w apps/web dev",
-    "shop": "npm run -w apps/shop dev",
+	"name": "monorepo",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"lint:fix": "turbo lint:fix",
+		"format": "prettier . --write",
+		"web": "npm run -w apps/web dev",
+		"shop": "npm run -w apps/shop dev",
 		"ui:add": "npm run -w packages/ui ui:add"
-  },
-  "devDependencies": {
-    "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "turbo": "^2.0.5"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "npm@10.7.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+	},
+	"devDependencies": {
+		"prettier": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.5",
+		"turbo": "^2.0.12"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"packageManager": "npm@10.8.2",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	]
 }
