@@ -2,8 +2,8 @@
 	"name": "@monorepo/ui",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
-		"build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+		"dev": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+		"build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
 		"lint": "eslint src/",
 		"lint:fix": "eslint src/ --fix",
 		"ui:add": "npx shadcn-ui@latest add"
@@ -31,9 +31,7 @@
 		"dist"
 	],
 	"exports": {
-		"./styles.css": "./dist/index.css",
-		"./postcss.config": "./postcss.config.mjs",
-		"./tailwind.config": "./tailwind.config.js",
+		"./styles.css": "./dist/styles.css",
 		"./lib/*": "./src/lib/*.js",
 		"./*": "./src/components/ui/*.jsx"
 	}

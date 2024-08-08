@@ -1,11 +1,11 @@
-import sharedConfig from '@monorepo/tailwind-config'
+import tailwindConfig from '@monorepo/tailwind-config'
 
 const config = {
 	content: [
 		'./src/components/**/*.{js,jsx,mdx}',
 		'./src/app/**/*.{js,jsx,mdx}'
 	],
-	presets: [sharedConfig]
+	presets: [tailwindConfig]
 }
 
 export default config
