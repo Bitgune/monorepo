@@ -6,7 +6,7 @@ Collection of internal eslint configurations.
 
 ```js
 module.exports = {
-	extends: ['@monorepo/eslint-config/library.js'],
+	extends: ['@monorepo/eslint-config/library.js']
 }
 ```
 

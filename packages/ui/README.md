@@ -8,8 +8,6 @@ React components and styles for the GolStadium project.
 import { Button } from '@monorepo/ui/button'
 
 function MyComponent() {
-	return (
-		<Button>Click me</Button>
-	)
+	return <Button>Click me</Button>
 }
 ```
