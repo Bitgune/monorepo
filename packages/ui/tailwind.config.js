@@ -1,9 +1,13 @@
 import tailwindConfig from '@monorepo/tailwind-config'
 
 const config = {
-	content: ['./src/**/*.jsx'],
 	// prefix: 'ui-',
-	presets: [tailwindConfig]
+	presets: [
+		{
+			...tailwindConfig,
+			content: ['./src/**/*.{js,jsx}']
+		}
+	]
 }
 
 export default config

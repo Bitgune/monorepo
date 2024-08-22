@@ -1,6 +1,6 @@
 # `@monorepo/ui`
 
-React components and styles for the GolStadium project.
+React components and styles for the @monorepo project.
 
 ## How to use
 

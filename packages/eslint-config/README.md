@@ -6,12 +6,12 @@ Collection of internal eslint configurations.
 
 ```js
 module.exports = {
-	extends: ['@monorepo/eslint-config/library.js']
+	extends: ['@monorepo/eslint-config/library']
 }
 ```
 
 ## List of configurations
 
-- `library.js`: Configuration for javascript code.
-- `react.js`: Configuration for React code.
-- `next.js`: Configuration for Next.js code.
+- `library`: Configuration for javascript code.
+- `react`: Configuration for React code.
+- `next`: Configuration for Next.js code.
