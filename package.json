@@ -8,14 +8,14 @@
 		"lint": "turbo lint",
 		"lint:fix": "turbo lint:fix",
 		"format": "prettier . --write",
-		"web": "npm run -w apps/web dev",
-		"shop": "npm run -w apps/shop dev",
-		"ui:add": "npm run -w packages/ui ui:add"
+		"web": "turbo dev --filter=@monorepo/web --filter={./packages/*}",
+		"shop": "turbo dev --filter=@monorepo/shop --filter={./packages/*}",
+		"ui:add": "npm run ui:add -w packages/ui"
 	},
 	"devDependencies": {
 		"prettier": "^3.3.3",
-		"prettier-plugin-tailwindcss": "^0.6.6",
-		"turbo": "^2.0.14"
+		"prettier-plugin-tailwindcss": "^0.6.8",
+		"turbo": "^2.1.3"
 	},
 	"engines": {
 		"node": ">=20"
