@@ -1,57 +1,22 @@
-# Turborepo Tailwind CSS starter
+# Turborepo Next.js starter
 
-This is a starter Turborepo with shadcn/ui pre-configured.
+This is a starter Turborepo with Next.js and shadcn/ui pre-configured.
 
-## What's inside?
+## Usage
 
-This Turborepo includes the following packages/apps:
+Install dependencies:
 
-### Apps and Packages
-
-- `shop`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `@monorepo/ui`: a stub React component library with [Shadcn/ui](https://ui.shadcn.com/) shared by both `web` and `shop` applications
-- `@monorepo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@monorepo/tailwind-config`: `tailwindcss` configurations and utilities
-
-### Building packages/ui
-
-This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.jsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.js`. This was chosen for several reasons:
-
-- Make sharing one `tailwind.config.js` to apps and packages as easy as possible.
-- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Maintain clear package export boundaries.
-
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.js` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
-
-For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js):
-
-```js
-  content: [
-    // app content
-    `src/**/*.{js,jsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,jsx}",
-  ],
+```sh
+cd monorepo
+npm install
 ```
-
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [Shadcn/ui](https://ui.shadcn.com/) for React components
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
 
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```sh
-npm build
+npm run build
 ```
 
 ### Develop
@@ -59,8 +24,65 @@ npm build
 To develop all apps and packages, run the following command:
 
 ```sh
-npm dev
+npm run dev
 ```
+
+### Develop a specific app
+
+To develop a specific app, run the following command:
+
+```sh
+npm run dev <app-name>
+```
+
+The available apps are `shop` and `web`.
+
+### Add ui components
+
+Use the pre-made script:
+
+```sh
+npm run ui:add <component-name>
+```
+
+> This works just like the add command in the `shadcn/ui` CLI.
+
+### Add a new app
+
+Turborepo offer a simple command to add a new app:
+
+```sh
+npx turbo gen workspace --name <app-name>
+```
+
+This will create a new empty app in the `apps` directory.
+
+If you want, you can copy an existing app with:
+
+```sh
+npx turbo gen workspace --name <app-name> --copy
+```
+
+> [!NOTE]
+> Remember to run `npm install` after copying an app.
+
+## What's inside?
+
+This monorepo includes the following packages/apps:
+
+### Apps and Packages
+
+- `shop`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
+- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
+- `@monorepo/ui`: a stub React component library shared by both `web` and `shop` applications (🚀 powered by [shadcn/ui](https://ui.shadcn.com/))
+- `@monorepo/eslint-config`: `eslint` configurations (includes `prettier` configuration as well)
+
+### Utilities
+
+This monorepo has some additional tools already setup for you:
+
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
 
 ### Remote Caching
 
@@ -68,7 +90,8 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
-```sh
+```
+cd monorepo
 npx turbo login
 ```
 
@@ -79,3 +102,18 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 ```sh
 npx turbo link
 ```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+Learn more about shadcn/ui:
+
+- [Documentation](https://ui.shadcn.com/docs)

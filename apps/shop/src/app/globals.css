@@ -1,16 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-	* {
-		@apply border-border;
-	}
-
-	body {
-		@apply bg-background text-foreground;
-
-		font-synthesis-weight: none;
-		text-rendering: optimizelegibility;
-	}
-}
+@import 'tailwindcss';
+@import '@monorepo/ui/styles.css';
