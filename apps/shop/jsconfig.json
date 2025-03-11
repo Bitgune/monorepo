@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"paths": {
 			"@/*": ["./src/*"],
-			"@ui/*": ["../../packages/ui/src/*"]
+			"@monorepo/ui/*": ["../../packages/ui/src/*"]
 		}
 	}
 }

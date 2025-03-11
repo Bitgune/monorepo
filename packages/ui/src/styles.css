@@ -1,9 +1,12 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:is(.dark *));
+@source "../../../apps/**/*.{js,jsx,ts,tsx}";
+@source "../../../components/**/*.{js,jsx,ts,tsx}";
+@source "./**/*.{js,jsx,ts,tsx}";
 
-@source "../../../apps/";
-@source "./components/";
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
 	--background: hsl(0 0% 0%);
@@ -236,19 +239,19 @@
 
 @layer utilities {
 	.text-shadow {
-		text-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+		text-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1);
 	}
 
 	.text-shadow-lg {
-		text-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+		text-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
 	}
 
 	.text-shadow-xl {
-		text-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+		text-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
 	}
 
 	.text-shadow-2xl {
-		text-shadow: 0 8px 16px rgb(0 0 0 / 10%);
+		text-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
 	}
 
 	.text-shadow-none {

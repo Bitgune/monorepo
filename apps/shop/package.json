@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbo --port 3001",
+		"dev": "next dev --turbopack --port 3001",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
@@ -11,14 +11,12 @@
 	},
 	"dependencies": {
 		"@monorepo/ui": "*",
-		"next": "^15.1.7",
+		"next": "^15.2.2",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
 	},
 	"devDependencies": {
 		"@monorepo/eslint-config": "*",
-		"@tailwindcss/postcss": "^4.0.6",
-		"eslint": "^8",
-		"tailwindcss": "^4.0.8"
+		"eslint": "^8"
 	}
 }

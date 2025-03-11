@@ -28,8 +28,8 @@ const IMPORT_SORT_GROUPS = [
 ]
 
 module.exports = {
-	extends: ['standard', 'plugin:prettier/recommended', 'turbo'],
-	plugins: ['simple-import-sort'],
+	extends: ['standard', 'plugin:prettier/recommended'],
+	plugins: ['simple-import-sort', 'turbo'],
 	globals: {
 		React: true,
 		JSX: true

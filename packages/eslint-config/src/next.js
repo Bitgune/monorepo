@@ -47,10 +47,9 @@ module.exports = {
 		'standard-jsx',
 		'standard-react',
 		'plugin:@next/next/recommended',
-		'plugin:prettier/recommended',
-		'turbo'
+		'plugin:prettier/recommended'
 	],
-	plugins: ['simple-import-sort'],
+	plugins: ['simple-import-sort', 'turbo'],
 	globals: {
 		React: true,
 		JSX: true

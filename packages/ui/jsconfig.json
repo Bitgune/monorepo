@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
+		"baseUrl": ".",
 		"paths": {
-			"@ui/*": ["./src/*"]
+			"@monorepo/ui/*": ["./src/*"]
 		}
 	}
 }

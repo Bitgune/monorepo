@@ -4,18 +4,17 @@
 	"rsc": true,
 	"tsx": false,
 	"tailwind": {
-		"config": "tailwind.config.js",
+		"config": "",
 		"css": "src/styles.css",
 		"baseColor": "neutral",
-		"cssVariables": true,
-		"prefix": ""
+		"cssVariables": true
 	},
 	"aliases": {
-		"components": "@ui/components",
-		"utils": "@ui/lib/utils",
-		"ui": "@ui/components/ui",
-		"lib": "@ui/lib",
-		"hooks": "@ui/hooks"
+		"components": "@monorepo/ui/components",
+		"utils": "@monorepo/ui/lib/utils",
+		"hooks": "@monorepo/ui/hooks",
+		"lib": "@monorepo/ui/lib",
+		"ui": "@monorepo/ui/components"
 	},
 	"iconLibrary": "lucide"
 }

@@ -1,6 +1,11 @@
 import Image from 'next/image'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@monorepo/ui/card'
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle
+} from '@monorepo/ui/components/card'
 
 function Gradient({ conic, className, small }) {
 	return (
@@ -40,7 +45,7 @@ export default function Page() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between p-24">
 			<div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-				<Card className="fixed left-0 top-0 flex justify-center border-b border-neutral-800 bg-neutral-800/30 bg-gradient-to-b from-inherit px-4 pb-6 pt-8 backdrop-blur-2xl lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:bg-neutral-800/30 lg:p-4">
+				<Card className="fixed top-0 left-0 flex justify-center border-b border-neutral-800 bg-neutral-800/30 bg-gradient-to-b from-inherit px-4 pt-8 pb-6 backdrop-blur-2xl lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:bg-neutral-800/30 lg:p-4">
 					monorepo -&nbsp;
 					<code className="font-mono font-bold">shop</code>
 				</Card>
@@ -65,7 +70,7 @@ export default function Page() {
 			</div>
 
 			<div className="relative flex place-items-center">
-				<div className="relative z-0 flex w-auto flex-col items-center justify-between gap-8 pb-16 pt-[48px] font-sans md:pb-24 md:pt-16 lg:pb-32 lg:pt-20">
+				<div className="relative z-0 flex w-auto flex-col items-center justify-between gap-8 pt-[48px] pb-16 font-sans md:pt-16 md:pb-24 lg:pt-20 lg:pb-32">
 					<div className="z-50 flex w-full items-center justify-center">
 						<div className="absolute min-h-[614px] min-w-[614px]">
 							<Image
